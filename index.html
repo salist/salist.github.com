@@ -1,1 +1,172 @@
-<h1>The first page in thepersonal site!</h1><h1>The first page in thepersonal site!</h1><h1>The first page in thepersonal site!</h1>
+<!DOCTYPE html PUBLIC "viewing the source - nice">
+<!-- saved from url=(0092)http://tutsplus.s3.amazonaws.com/tutspremium/courses_$folder$/Git-Essentials/quiz/index.html -->
+<html class=" js boxshadow localstorage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Tuts+ Quizzes</title>
+	
+	<link rel="stylesheet" href="http://tutsplus.s3.amazonaws.com/tutspremium/courses_$folder$/Quiz-Engine/css/stylus/font.css">
+	<link rel="stylesheet" href="http://tutsplus.s3.amazonaws.com/tutspremium/courses_$folder$/Quiz-Engine/css/style.css">
+
+	<link rel="shortcut icon" href="http://tutsplus.s3.amazonaws.com/tutspremium/courses_$folder$/Git-Essentials/quiz/favicon.ico">
+
+	<script src="./Tuts+ Quizzes_files/modernizr-custom.js"></script>
+	<style>
+	ul.radios li { font-size: 13px !important; }
+	</style>
+</head>
+<body>
+
+<div id="header-wrap">
+    <header>
+    	<a href="http://tutsplus.com/" class="logo">Tuts+ Premium</a>
+        
+        <nav>
+	        <ul class="main-navigation">
+	  			<li class="active"><a href="http://tutsplus.com/">Home</a></li>
+	            <li><a href="http://tutsplus.com/get-started/">Get Started</a></li>
+	      		<li><a href="http://tutsplus.com/forums/">Forums</a></li>
+	    		<li><a href="http://tutsplus.com/help-support/" class="support-link">Help &amp; Support</a></li>
+	  			<li><a href="http://twitter.com/tutspremium" class="twitter-link">Twitter</a></li>
+			</ul> 
+		</nav>       
+
+        <div id="user-info">
+        	<ul id="premium_amember_widget-3" class="premium-amember-widget">
+        		<li><a href="http://tutsplus.com/amember/login.php" class="top-level-user sign-in"><span>Sign In</span></a></li>
+      			<li><a href="http://tutsplus.com/amember/member.php" class="top-level-user my-account"><span>My Account</span></a></li>
+   			 </ul>
+   		</div>
+      </header>      
+</div> <!-- end header wrap -->
+
+<ul class="quiz-crumbs wrap">
+	<li><a href="http://tutsplus.com/">Home</a></li>
+	<li><a href="http://tutsplus.com/courses">Courses</a></li>
+	<li><a class="course-url" href="http://tutsplus.com/course/git-essentials/">Git Essentials</a></li>	
+	<li><a class="quiz-url" href="http://tutsplus.com/lesson/git-essentials-course-quiz">Quiz</a></li>	
+</ul>
+
+<div id="content-wrap" class="wrap">
+	<div class="content" role="main">
+	<h1 class="title">Quiz:  Git Essentials</h1>
+
+	<div class="primary-content">
+		<script id="question" type="text/x-jquery-tmpl">
+		 	<div class="question fancy-shadow ${input_type}">
+				<h3 data-syntax="${syntax}">{{html title}}</h3>
+				{{if details}}
+					<p>{{html details}}</p>
+				{{/if}}
+
+				<form data-syntax="${syntax}">
+					{{if input_type === 'text'}}
+						{{if Quiz.viewingSolutions}}<input type="text" class="choice" value="${answer}" required />{{else}}<input type="text" class="choice" value="${default_input_value}" required>{{/if}}
+					{{else input_type === 'textarea'}}
+						<textarea class="choice ${syntax}" name="ta">{{if Quiz.viewingSolutions}}${answer} {{else}}${default_input_value}{{/if}}</textarea>
+					{{else input_type === 'boolean'}}
+						<ul class="radios choice bool">
+							<li>
+								<input type="radio" name="bool" value="true" {{if Quiz.viewingSolutions && answer }} checked {{/if}} />
+								<label class="true">True</label>
+							</li>
+							<li>
+								<input type="radio" name="bool" value="false" {{if Quiz.viewingSolutions && !answer }} checked {{/if}} />
+								<label class="false">False</label>
+							</li>
+						</ul>
+					{{else input_type === 'radio'}}
+
+						<ul class="radios choice multiple {{if each_radio_on_own_line}}radio_block{{/if}}">
+							{{each(i, val) choices }}
+								<li>
+									<input 
+										type="radio" 
+										name="${name}" 
+										id="${name}_${val}" 
+										value="${val}" 
+										{{if Quiz.viewingSolutions && val === answer }} 
+											checked 
+										{{/if}}  />
+									<label for="${name}_${val}">${val}</label>
+								</li>
+							{{/each}}
+						</ul>
+					{{/if}}
+					<span class="divider"></span>
+					<input type="submit" class="orange-button" value="{{if viewingSolutions}} Next {{else}} Submit {{/if}}" />
+				</form>
+			</div>
+
+			{{if Quiz.viewingSolutions }}
+				{{if notes}}
+				<div class="notes">
+					<h4> Additional Notes </h4>
+					<p><mark>{{html notes}}</mark></p>
+				</div>
+				{{/if}}
+			{{/if}}
+		</script>
+
+		<div id="results" style="display: none;" class="fancy-shadow">
+			<h2 class="grade">
+				<span class="score"></span>
+			</h2>
+			<a href="http://tutsplus.s3.amazonaws.com/tutspremium/courses_$folder$/Git-Essentials/quiz/index.html?solutions" class="orange-button" id="viewSolutions">View Solutions</a>
+			<p>How'd you do? If any of the questions left you twiddling your thumbs, be sure to revisit the applicable lesson in the course for another viewing!</p>
+
+			<p class="twitter">
+				<a class="tweet-url" href="http://twitter.com/share?url=http://tutsplus.com/course/git-essentials/" target="_blank">Tweet Your Score</a>
+			</p>
+		</div>
+	<div class="question fancy-shadow radio">     <h3 data-syntax="xml"><span class="count">1</span>To set your email address at the global--or user--level, what command would you type?</h3>           <form data-syntax="xml" id="0">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_86" id="answer_86_git set --user email &lt;email&gt;" value="git set --user email &lt;email&gt;">          <label for="answer_86_git set --user email &lt;email&gt;">git set --user email &lt;email&gt;</label>         </li>                 <li>          <input type="radio" name="answer_86" id="answer_86_git config --global user.email &lt;email&gt;" value="git config --global user.email &lt;email&gt;">          <label for="answer_86_git config --global user.email &lt;email&gt;">git config --global user.email &lt;email&gt;</label>         </li>                 <li>          <input type="radio" name="answer_86" id="answer_86_git config email &lt;email&gt;" value="git config email &lt;email&gt;">          <label for="answer_86_git config email &lt;email&gt;">git config email &lt;email&gt;</label>         </li>                 <li>          <input type="radio" name="answer_86" id="answer_86_git set --user user.email&gt;email" value="git set --user user.email&gt;email">          <label for="answer_86_git set --user user.email&gt;email">git set --user user.email&gt;email</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    <iframe src="./Tuts+ Quizzes_files/iframe.htm" class="sandbox" scrolling="no" style="height: auto; display: none;"></iframe></div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">2</span>To create a Git repository, which command do you run?</h3>           <form data-syntax="xml" id="1">              <ul class="radios choice multiple ">                 <li>          <input type="radio" name="answer_768" id="answer_768_git create &lt;project-name&gt;" value="git create &lt;project-name&gt;">          <label for="answer_768_git create &lt;project-name&gt;">git create &lt;project-name&gt;</label>         </li>                 <li>          <input type="radio" name="answer_768" id="answer_768_git new" value="git new">          <label for="answer_768_git new">git new</label>         </li>                 <li>          <input type="radio" name="answer_768" id="answer_768_git new &lt;project-name&gt;" value="git new &lt;project-name&gt;">          <label for="answer_768_git new &lt;project-name&gt;">git new &lt;project-name&gt;</label>         </li>                 <li>          <input type="radio" name="answer_768" id="answer_768_git init" value="git init">          <label for="answer_768_git init">git init</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow boolean" style="display: none;">     <h3 data-syntax="xml"><span class="count">3</span>True or False: The <code>git status</code> command shows the status of the integrated repository test suite.</h3>           <form data-syntax="xml" id="2">             <ul class="radios choice bool">        <li>         <input type="radio" name="bool" value="true" id="true_0">         <label class="true" for="true_0">True</label>        </li>        <li>         <input type="radio" name="bool" value="false" id="false_0">         <label class="false" for="false_0">False</label>        </li>       </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">4</span>Which command would you run to stage the changes in the <code>js/app.js</code> file?</h3>           <form data-syntax="xml" id="3">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_466" id="answer_466_git add js/app.js" value="git add js/app.js">          <label for="answer_466_git add js/app.js">git add js/app.js</label>         </li>                 <li>          <input type="radio" name="answer_466" id="answer_466_git stage js/app.js" value="git stage js/app.js">          <label for="answer_466_git stage js/app.js">git stage js/app.js</label>         </li>                 <li>          <input type="radio" name="answer_466" id="answer_466_git commit js/app.js" value="git commit js/app.js">          <label for="answer_466_git commit js/app.js">git commit js/app.js</label>         </li>                 <li>          <input type="radio" name="answer_466" id="answer_466_git commit js/app.js --to-staging-area" value="git commit js/app.js --to-staging-area">          <label for="answer_466_git commit js/app.js --to-staging-area">git commit js/app.js --to-staging-area</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow text" style="display: none;">     <h3 data-syntax="xml"><span class="count">5</span>Write the basic command used to create a commit from the staged changes (don't include any flags).</h3>           <form data-syntax="xml" id="4">             <input type="text" class="choice" value="" required="">            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">6</span>What is the name of the file used to tell Git to ignore certain files?</h3>           <form data-syntax="xml" id="5">              <ul class="radios choice multiple ">                 <li>          <input type="radio" name="answer_899" id="answer_899_gitignore" value="gitignore">          <label for="answer_899_gitignore">gitignore</label>         </li>                 <li>          <input type="radio" name="answer_899" id="answer_899_.gitignore" value=".gitignore">          <label for="answer_899_.gitignore">.gitignore</label>         </li>                 <li>          <input type="radio" name="answer_899" id="answer_899_ignore.git" value="ignore.git">          <label for="answer_899_ignore.git">ignore.git</label>         </li>                 <li>          <input type="radio" name="answer_899" id="answer_899_.ignore" value=".ignore">          <label for="answer_899_.ignore">.ignore</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow text" style="display: none;">     <h3 data-syntax="xml"><span class="count">7</span>Write the command that will display the diff of the README file, comparing the version in the staging area with the latest committed version.</h3>           <form data-syntax="xml" id="6">             <input type="text" class="choice" value="" required="">            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">8</span>What command do you run to view the commit history of your repository?</h3>           <form data-syntax="xml" id="7">              <ul class="radios choice multiple ">                 <li>          <input type="radio" name="answer_668" id="answer_668_git history" value="git history">          <label for="answer_668_git history">git history</label>         </li>                 <li>          <input type="radio" name="answer_668" id="answer_668_git log" value="git log">          <label for="answer_668_git log">git log</label>         </li>                 <li>          <input type="radio" name="answer_668" id="answer_668_git commit -h" value="git commit -h">          <label for="answer_668_git commit -h">git commit -h</label>         </li>                 <li>          <input type="radio" name="answer_668" id="answer_668_git past" value="git past">          <label for="answer_668_git past">git past</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">9</span>To create a branch, you run <code>git branch <branch-name></branch-name></code>. How can you create a branch and switch to it in one command?</h3>           <form data-syntax="xml" id="8">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_16" id="answer_16_git branch --switch &lt;branch-name&gt;" value="git branch --switch &lt;branch-name&gt;">          <label for="answer_16_git branch --switch &lt;branch-name&gt;">git branch --switch &lt;branch-name&gt;</label>         </li>                 <li>          <input type="radio" name="answer_16" id="answer_16_git checkout -b &lt;branch-name&gt;" value="git checkout -b &lt;branch-name&gt;">          <label for="answer_16_git checkout -b &lt;branch-name&gt;">git checkout -b &lt;branch-name&gt;</label>         </li>                 <li>          <input type="radio" name="answer_16" id="answer_16_git branch --checkout &lt;branch-name&gt;" value="git branch --checkout &lt;branch-name&gt;">          <label for="answer_16_git branch --checkout &lt;branch-name&gt;">git branch --checkout &lt;branch-name&gt;</label>         </li>                 <li>          <input type="radio" name="answer_16" id="answer_16_git checkout --create-branch &lt;branch-name&gt;" value="git checkout --create-branch &lt;branch-name&gt;">          <label for="answer_16_git checkout --create-branch &lt;branch-name&gt;">git checkout --create-branch &lt;branch-name&gt;</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow text" style="display: none;">     <h3 data-syntax="xml"><span class="count">10</span>Write the command that would merge the <code>awesome_feature</code> branch with the <code>master</code> branch, assuming you are on the <code>master</code> branch.</h3>           <form data-syntax="xml" id="9">             <input type="text" class="choice" value="" required="">            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">11</span>Which command will add a remote branch to the repository?</h3>           <form data-syntax="xml" id="10">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_495" id="answer_495_git remote add &lt;name&gt; &lt;url&gt;" value="git remote add &lt;name&gt; &lt;url&gt;">          <label for="answer_495_git remote add &lt;name&gt; &lt;url&gt;">git remote add &lt;name&gt; &lt;url&gt;</label>         </li>                 <li>          <input type="radio" name="answer_495" id="answer_495_git branch --remote &lt;name&gt; &lt;url&gt;" value="git branch --remote &lt;name&gt; &lt;url&gt;">          <label for="answer_495_git branch --remote &lt;name&gt; &lt;url&gt;">git branch --remote &lt;name&gt; &lt;url&gt;</label>         </li>                 <li>          <input type="radio" name="answer_495" id="answer_495_git remote new &lt;name &lt;url&gt;" value="git remote new &lt;name &lt;url&gt;">          <label for="answer_495_git remote new &lt;name &lt;url&gt;">git remote new &lt;name &lt;url&gt;</label>         </li>                 <li>          <input type="radio" name="answer_495" id="answer_495_git branch &lt;name&gt; &lt;url&gt;" value="git branch &lt;name&gt; &lt;url&gt;">          <label for="answer_495_git branch &lt;name&gt; &lt;url&gt;">git branch &lt;name&gt; &lt;url&gt;</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">12</span>Assuming your repo has a remote called <code>production</code>, what command would send all local committed changes on the master branch to that remote?</h3>           <form data-syntax="xml" id="11">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_950" id="answer_950_git send master production" value="git send master production">          <label for="answer_950_git send master production">git send master production</label>         </li>                 <li>          <input type="radio" name="answer_950" id="answer_950_git send production master" value="git send production master">          <label for="answer_950_git send production master">git send production master</label>         </li>                 <li>          <input type="radio" name="answer_950" id="answer_950_git push master production" value="git push master production">          <label for="answer_950_git push master production">git push master production</label>         </li>                 <li>          <input type="radio" name="answer_950" id="answer_950_git push production master" value="git push production master">          <label for="answer_950_git push production master">git push production master</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow text" style="display: none;">     <h3 data-syntax="xml"><span class="count">13</span>Write the command that would remove the latest stash from the stash list and apply it to the staging area.</h3>           <form data-syntax="xml" id="12">             <input type="text" class="choice" value="" required="">            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div><div class="question fancy-shadow radio" style="display: none;">     <h3 data-syntax="xml"><span class="count">14</span>What command would create the <code>c</code> alias for the <code>commit</code> command (at the global, or user, level)?</h3>           <form data-syntax="xml" id="13">              <ul class="radios choice multiple radio_block">                 <li>          <input type="radio" name="answer_604" id="answer_604_git config --global alias.c commit" value="git config --global alias.c commit">          <label for="answer_604_git config --global alias.c commit">git config --global alias.c commit</label>         </li>                 <li>          <input type="radio" name="answer_604" id="answer_604_git config --global alias.commit c" value="git config --global alias.commit c">          <label for="answer_604_git config --global alias.commit c">git config --global alias.commit c</label>         </li>                 <li>          <input type="radio" name="answer_604" id="answer_604_git config alias.c commit" value="git config alias.c commit">          <label for="answer_604_git config alias.c commit">git config alias.c commit</label>         </li>                 <li>          <input type="radio" name="answer_604" id="answer_604_git config alias.commit c" value="git config alias.commit c">          <label for="answer_604_git config alias.commit c">git config alias.commit c</label>         </li>               </ul>            <span class="divider"></span>      <input type="submit" class="orange-button" value=" Submit ">     </form>    </div></div>	<!-- end primary content -->
+
+	<aside>
+		<h2>Current Score: <span class="score">100%</span></h2>
+		<h3 class="progress">0% Complete</h3>
+	</aside>
+
+	</div>
+
+</div> <!-- end content-wrap -->
+
+
+
+<script src="./Tuts+ Quizzes_files/questions.js"></script>
+<script src="./Tuts+ Quizzes_files/script.js"></script>
+
+
+
+<script>
+// Set URLS and titles
+$('.title').text(function(i, text) {
+	return text + ' ' + questions[0].title;
+});
+$('a.course-url').attr('href', questions[0].courseUrl).text(questions[0].title);
+$('a.quiz-url').attr('href', questions[0].quizUrl);
+$('a.tweet-url').attr('href', function(i, url) {
+	return url + questions[0].courseUrl;
+});
+
+if ( Quiz.viewingSolutions ) $('h1')[0].innerHTML += ': Solutions';
+
+// Twitter Share Button Stuff
+$.subscribe('quizComplete', function() {
+	var results = $('#results'),
+		twitterLink = results.find('p.twitter a'),
+		url = twitterLink.attr('href');
+
+	url += '&text=' + encodeURI('I scored ' + results.find('span.score').text() + ' on the @TutsPremium ' + questions[0].title + ' quiz!');
+
+	twitterLink.attr('href', url);
+});
+</script>
+
+<!-- IE Chrome Frame Prompt>
+<!--[if lte IE 8 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]--> 
+
+
+</body></html>
