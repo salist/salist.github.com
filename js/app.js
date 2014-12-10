@@ -1,8 +1,8 @@
 'use strict';
 (function() {
-	var app = angular.module('feedbackForm', [])
+	var app = angular.module('feedbackForm', []);
 
-	.controller('DefaultController', function($scope){
+	app.controller('DefaultController', function($scope){
 
 		$scope.val = {
 			'text_button': 'Please let us know what you think about us',
@@ -13,9 +13,9 @@
 			return $scope.val.toggle_popup = !$scope.val.toggle_popup;
 		};
 
-	})
+	});
 
-	.directive('popUp', [function(){
+	app.directive('popUp', [function(){
 		return {
 			controller: function($scope){
 				$scope.text = {
@@ -24,10 +24,18 @@
 					'placeholder_comment': 'Your comment',
 					'text_button': 'Send us your feedback',
 					'error_email': 'Please enter valid e-mail',
-					'error_age': 'Please enter valid age',
-					'error_age_number': 'Value should be number',
-					'error_comment': 'Please provide us your feedback'
+					'error_age': 'Please enter valid age. Minimal value should be equil ',
+					'error_comment': 'Please provide us your feedback',
+					'minAge': 18
 				};
+
+				var date = new Date,
+					timeZone = -date.getTimezoneOffset()/60; 
+
+				if(timeZone>= -11 && timeZone <= -4) {
+					$scope.text.minAge = 21;
+				}
+
 			},
 			restrict: 'A',
 			templateUrl: 'view/form.html'

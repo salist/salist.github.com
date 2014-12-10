@@ -10,11 +10,10 @@
   </div>
 
   <div class="wrap-field">
-    <input type="text" name="age" placeholder="{{text.placeholder_age}}" ng-model="comments.age" required/> 
+    <input type="number" min="{{text.minAge}}"  name="age" placeholder="{{text.placeholder_age}}" ng-model="comments.age" required/> 
 
-    <p class="error-field" ng-hide="feedback.age.$valid || feedback.age.$pristine">{{text.error_age}}</p>
+    <p class="error-field" ng-hide="feedback.age.$valid || (comments.age >= text.minAge) || feedback.age.$pristine">{{text.error_age}} {{text.minAge}}</p>
 
-    <p class="error-field" ng-hide="(comments.age | number) || feedback.age.$pristine">{{text.error_age_number}}</p>
   </div>
 
   <div class="wrap-field">
