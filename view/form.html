@@ -1,0 +1,29 @@
+<!-- view feedback form -->
+<div class="wrapper-form">
+
+  <form novalidate name="feedback" class="feedback-form">
+  
+  <div class="wrap-field">
+    <input type="email" name="email" placeholder="{{text.placeholder_email}}" ng-model="comments.email" required />  
+    <span class="btn-close" ng-click="toggle_show_popup()">X</span>  
+    <p class="error-field" ng-hide="feedback.email.$valid || feedback.email.$pristine">{{text.error_email}}</p>
+  </div>
+
+  <div class="wrap-field">
+    <input type="text" name="age" placeholder="{{text.placeholder_age}}" ng-model="comments.age" required/> 
+
+    <p class="error-field" ng-hide="feedback.age.$valid || feedback.age.$pristine">{{text.error_age}}</p>
+
+    <p class="error-field" ng-hide="(comments.age | number) || feedback.age.$pristine">{{text.error_age_number}}</p>
+  </div>
+
+  <div class="wrap-field">
+    <textarea rows="10" cols="45" name="comment" placeholder="{{text.placeholder_comment}}" ng-model="comments.comment" required></textarea> 
+    <p class="error-field" ng-hide="feedback.comment.$pristine || feedback.comment.$valid">{{text.error_comment}}</p>
+  </div>
+  
+  <button ng-disabled="feedback.$invalid" ng-click="toggle_show_popup()">{{text.text_button}}</button>
+
+
+  </form>
+</div>
